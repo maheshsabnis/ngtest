@@ -156,3 +156,30 @@ Day 5: Exercise
             1. Observable is a stream storage (?) from rxjs lib.
                1. The storage where the async response is stored that is received from the REST API
       2. The HttpClient is a Singleton object registered by HttpClientModule class
+
+======================================================================
+1. Reusable Functional Attributes for UI
+   1. Custom Attribute Directives
+   2. Properties for the Custom Directive
+   3. Logic 
+   4. Events those who will activate the directive
+2. Exercise Day 6
+   1. Create a custom directive that will be used to check the unique value of the ProductId by making the http call to the Product REST API. If the ProductId is already available then it should change the border of the TextBox to red.
+      1. Hint: Use DI of Service in the Directive
+      2. Hint: Trap the (blur) event on the TextBox in the directive 
+     
+3. Developing the Build for CSS and Custom JavaScript
+4. State Management for Front-End
+5. Testing 
+
+
+
+
+
+
+
+
+
+
+
+

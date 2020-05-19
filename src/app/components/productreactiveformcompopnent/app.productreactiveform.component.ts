@@ -16,12 +16,14 @@ export class ProductReactiveFormComponent implements OnInit {
   headers: Array<string>;
   value: number;
   frmPrd: FormGroup;
+  color: string;
   constructor() {
       this.product = new Product(0, '', 0, '');
       this.products = new Array<Product>();
       this.logic = new Logic();
       this.headers  =new Array<string>();
       this.value = 0;
+      this.color = 'yellow';
 
       // Bind the Product Model class to the FormGroup
       // Each public proeprty form the Model class will be bound using the

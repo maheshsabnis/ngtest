@@ -12,10 +12,12 @@ export class TableDirectiveComponent implements OnInit {
   // in this case data type is 'any'
   @Output()
   onRowSelected: EventEmitter<any>;
-
+  @Input()
+  color: string;
   constructor() {
       this._DataSource = new Array<any>();
       this.headers = new Array<string>();
+      this.color = '';
       this.onRowSelected  = new EventEmitter<any>();
   }
 

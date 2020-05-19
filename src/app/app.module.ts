@@ -22,6 +22,8 @@ import { EmpReceiverComponent } from './components/masterdetailscommunication/ap
 import { HttpServiceComponent } from './components/httpservicecomponent/app.httpservice.component';
 import { SecureCallComponent } from './components/securecallcomponent/app.securecall.component';
 import { Test1ElementComponent } from './elements/app.test1.element';
+import { ColorDirective } from './directives/app.color.directive';
+import { ColorDirectiveComponent } from './components/directivecomponent/app.directive.component';
 
 
 
@@ -55,7 +57,9 @@ import { Test1ElementComponent } from './elements/app.test1.element';
     EmpReceiverComponent,
     HttpServiceComponent,
     SecureCallComponent,
-    Test1ElementComponent
+    Test1ElementComponent,
+    ColorDirective,
+    ColorDirectiveComponent
   ],
   imports: [
     BrowserModule, FormsModule, ReactiveFormsModule,
@@ -67,7 +71,7 @@ import { Test1ElementComponent } from './elements/app.test1.element';
   // use entryComponent so that the Angular Elements will be
   // set for DOM Execution
   entryComponents: [Test1ElementComponent],
-  bootstrap: [ AppComponent]
+  bootstrap: [ ProductReactiveFormComponent]
 })
 export class AppModule {
  // Inject the Injector object in ctor, this will be used

@@ -7,7 +7,7 @@
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let rec of DataSource" (click)="onRowSelectedEvent(rec)">
+            <tr [setColor]="color" *ngFor="let rec of DataSource" (click)="onRowSelectedEvent(rec)">
                 <td *ngFor="let h of headers">
                     {{rec[h]}}
                 </td>
