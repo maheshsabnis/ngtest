@@ -13,6 +13,7 @@
         <div class="form-group">
             <label>Price</label>
             <input type="text" name="Price" [(ngModel)]="product.Price" class="form-control">
+            <input type="text" class="form-control" [value]="salesTax" disabled />
         </div>
         <div class="form-group">
             <label>Category</label>
