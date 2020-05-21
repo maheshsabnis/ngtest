@@ -1,0 +1,36 @@
+const gulp = require('gulp');
+const sass = require('gulp-sass');
+const browserSync = require('browser-sync').create();
+
+function style() {
+    // 1. source location of .scss file
+    return gulp.src('./scss/**/*.scss')
+        // 2. pass the file to sass compiler
+        .pipe(sass())
+        // 3. save the file in the target location
+        .pipe(gulp.dest('./css'))
+        // 4. stream changes to all browsers
+        .pipe(browserSync.stream());
+}
+
+// function watch for changes
+function watch() {
+    // 1. browser init with base directory to serve
+    // contents
+    browserSync.init({
+        server: {
+            baseDir: './'
+        }
+    });
+    // 2. watch changes in scss files and compile
+    // using stule function
+    gulp.watch('./scss/**/*.scss', style);
+    // 3. if html files are changed then reload to browser
+    gulp.watch('./*.html').on('change', browserSync.reload);
+    // 4. if javascript files are chnaged the reloead them in browser
+    gulp.watch('./scss/**/*.scss', browserSync.reload);
+
+}
+
+exports.style = style;
+exports.watch = watch;

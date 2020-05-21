@@ -158,28 +158,42 @@ Day 5: Exercise
       2. The HttpClient is a Singleton object registered by HttpClientModule class
 
 ======================================================================
+
 1. Reusable Functional Attributes for UI
    1. Custom Attribute Directives
    2. Properties for the Custom Directive
-   3. Logic 
+   3. Logic
    4. Events those who will activate the directive
 2. Exercise Day 6
    1. Create a custom directive that will be used to check the unique value of the ProductId by making the http call to the Product REST API. If the ProductId is already available then it should change the border of the TextBox to red.
       1. Hint: Use DI of Service in the Directive
-      2. Hint: Trap the (blur) event on the TextBox in the directive 
-     
-3. Developing the Build for CSS and Custom JavaScript
-4. State Management for Front-End
-5. Testing 
-
-
-
-
-
-
-
-
-
-
-
-
+      2. Hint: Trap the (blur) event on the TextBox in the directive
+3. Angular Single Page App
+   1. Navigations
+      1. Server-Side Navigation
+      2. Load Route Table / Navigations and Static DOM in Browser
+      3. Query to Route Table to featch Static DOM and Load it Dynamically in container
+   2. @angular/router
+      1. RouterModule
+         1. Route Table using 'Routes' class
+         2. Each entry in Route Table is 'Route' class
+            1. Properties
+               1. path: URI with/without parameters
+               2. component: Name of the NG Component
+               3. children: Array for Sub Routes aka child routes of the type Routes
+               4. redirectTo: Default Route Path aka URI
+               5. CanActivate: Used fro Role Based Routing
+               6. loadChildren: Lazy Loading of components from other modules or libs
+         3. Router
+            1. USed for Explicit Routing aka event based routing
+               1. navigate([<ROUTE URI with Parameters>]) method
+         4. ActivatedRoute
+            1. Used for Parameters based Routing
+            2. subscribe to the Route URL to read parameter(s)
+         5. [routerLink] the custom attibute directive that accepts Route Expression aka URI
+         6. <router-outlet></router-outlet>, the custom component that render the Component against the ROute Expression
+   3. SharedModules aka FeatureModules
+      1. The SharedModule must import 'CommonModule' if the SharedModule has any components in it.
+4. Developing the Build for CSS and Custom JavaScript
+5. State Management for Front-End
+6. Testing
